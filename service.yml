@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: CIStech
+  name: myapp
   namespace: default
 spec:
   selector:
-    app: CIStech
+    app: myapp
   ports:
     - protocol: TCP
       port: 80
