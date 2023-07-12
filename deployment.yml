@@ -1,14 +1,21 @@
-replicas: 3
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  labels:
+   app: web
+spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: myapps
-    template:
+      app: web
+  template:
     metadata:
       labels:
-        app: myapps
+        app: web
     spec:
       containers:
-      - name: docker
-        image: dotnet-web:latest
+      - name: web
+        image: dotnetdemo-web:latest # Replace with the image name from your Docker build process
         ports:
         - containerPort: 80
