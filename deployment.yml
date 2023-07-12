@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-deployment
-  namespace: <new-project  > # Replace with your desired namespace name
+  namespace: <bermtec > # Replace with your desired namespace name
 spec:
   replicas: 1
   selector:
